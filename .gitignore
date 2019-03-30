@@ -1,3 +1,6 @@
+# Pranay locals
+Data augmentation.ipynb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -71,6 +74,9 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Visual Studio Code
+.vscode
 
 # pyenv
 .python-version
