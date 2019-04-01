@@ -18,11 +18,13 @@ for class_dir in os.listdir(data_path):
         image = sk.io.imread(image_path)
         noised = sk.util.random_noise(image)
         inverted = util.invert(image)
+        grayscale = sk.color.rgb2gray(image)
         image_name = image_name[:image_name.index('.')] + '.png'
         # write image to the disk
         noised_path = os.path.join(target_data_path, class_dir, 'noised_' + image_name)
         sk.io.imsave(noised_path, noised)
         inverted_path = os.path.join(target_data_path, class_dir, 'inverted_' + image_name)
         sk.io.imsave(inverted_path, inverted)
+        grayscale_path = os.path.join(target_data_path, class_dir, 'grayscale_' + image_name)
+        sk.io.imsave(grayscale_path, grayscale)
         print(image_name)
-
