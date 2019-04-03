@@ -20,3 +20,8 @@ print('averages of second half:')
 for k,v in j.items():
     avg = sum(v[5:]) / len(v[5:])
     print("{}: {}".format(k, avg))
+
+print('weighted averages')
+for k,v in j.items():
+    avg = sum([(i + 1) * acc for i, acc in enumerate(v)]) / sum([i for i in range(1, 11)])
+    print("{}: {}".format(k, avg))
